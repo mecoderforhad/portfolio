@@ -1,4 +1,11 @@
+import MainPageWrapper from "@/components/Layout/MainPageWrapper";
+import SubLayout from "@/components/sub-layout/SubLayout";
+
 const index = () => {
-  return <>this is contact</>;
+  return (
+    <MainPageWrapper>
+      <SubLayout>this is contact</SubLayout>
+    </MainPageWrapper>
+  );
 };
 export default index;

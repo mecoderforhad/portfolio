@@ -43,7 +43,7 @@ const SideBar = () => {
     setKey(title);
   };
   const handleClick = (title) => {
-    title == "home" ? "/" : title ? Router.push(`${title}`) : "";
+    title == "home" ? Router.push("/") : title ? Router.push(`${title}`) : "";
   };
   return (
     <Box className={styles.container}>
