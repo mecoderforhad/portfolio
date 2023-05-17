@@ -1,0 +1,27 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+
+.subContainer1 {
+  display: flex;
+  width: 50%;
+  padding: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.subContainer2 {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.textWord {
+  width: 500px;
+  height: 300px;
+  padding: 10px;
+}

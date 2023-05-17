@@ -1,0 +1,51 @@
+.container {
+  position: relative;
+  /* box-shadow: 2px 2px 10px #ececec; */
+  border-radius: 20px;
+  margin: 0px 10px 0px;
+  background: #d71b3e;
+  cursor: pointer;
+  width: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menuIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.menuIcon:hover {
+  background-color: #219ebc;
+  transition: all 1;
+  border-radius: 20px;
+}
+.sideHoverMenu {
+  position: absolute;
+  transform: translateY(-100%);
+  animation: sideBarMenu 0.5s infinite;
+  width: auto;
+  left: 100%;
+  background: #219ebc;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 20px;
+  z-index: -1;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes sideBarMenu {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
