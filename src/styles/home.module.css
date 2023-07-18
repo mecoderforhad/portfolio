@@ -6,6 +6,12 @@
   padding: 20px;
 }
 
+.subContainer {
+  display: flex;
+  width: auto;
+  padding: 20px;
+}
+
 .subContainer1 {
   display: flex;
   width: 50%;

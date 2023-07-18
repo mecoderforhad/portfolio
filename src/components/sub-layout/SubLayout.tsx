@@ -4,7 +4,7 @@ import styles from "../../styles/home.module.css";
 const SubLayout = ({ children }) => {
   return (
     <Grid className={styles.main}>
-      <Grid className={styles.subContainer1}>{children}</Grid>
+      <Grid className={styles.subContainer}>{children}</Grid>
     </Grid>
   );
 };
