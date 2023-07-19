@@ -1,16 +1,21 @@
-import { Grid, Box, Container } from "@mui/material";
+import React, { ReactNode } from "react";
+import { Grid, Box } from "@mui/material";
 import SideBar from "./SideBar";
 import styles from "../../styles/body.module.css";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 
-const store = configureStore({
-  reducer:{
-    //
-  }
-})
+interface Props {
+  children?: ReactNode;
+}
 
-const MainPageWrapper = ({ children }) => {
+const store = configureStore({
+  reducer: {
+    //
+  },
+});
+
+const MainPageWrapper = ({ children }: Props) => {
   return (
     <Provider store={store}>
       <Box className={styles.body}>

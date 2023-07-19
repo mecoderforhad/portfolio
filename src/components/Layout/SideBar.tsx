@@ -1,58 +1,30 @@
-import { Box, Grid, Typography, keyframes } from "@mui/material";
-import HomeIcon from "@mui/icons-material/Home";
-import PersonIcon from "@mui/icons-material/Person";
-import ArticleIcon from "@mui/icons-material/Article";
-import FolderCopyIcon from "@mui/icons-material/FolderCopy";
-import CreateIcon from "@mui/icons-material/Create";
-import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
+import { Box, Grid, Typography } from "@mui/material";
 import { useState } from "react";
 import styles from "./../../styles/sidebar.module.css";
 import { useRouter } from "next/router";
+import { menuObj } from "./data/data";
 
-const menuObj = [
-  {
-    title: "home",
-    icon: <HomeIcon />,
-  },
-  {
-    title: "about",
-    icon: <PersonIcon />,
-  },
-  {
-    title: "resume",
-    icon: <ArticleIcon />,
-  },
-  {
-    title: "portfolio",
-    icon: <FolderCopyIcon />,
-  },
-  {
-    title: "blogs",
-    icon: <CreateIcon />,
-  },
-  {
-    title: "contact",
-    icon: <ContactPhoneIcon />,
-  },
-];
-
+interface Imenu {
+  title: string;
+  icon: any;
+}
 const SideBar = () => {
-  const [key, setKey] = useState(null);
+  const [key, setKey] = useState<string | null>(null);
   const Router = useRouter();
-  const handleHover = (title) => {
+  const handleHover = (title: string) => {
     setKey(title);
   };
-  const handleClick = (title) => {
+  const handleClick = (title: string) => {
     title == "home" ? Router.push("/") : title ? Router.push(`${title}`) : "";
   };
   return (
     <Box className={styles.container}>
-      {menuObj.map((item) => (
-        <>
+      {menuObj.map((item: Imenu, i: number) => (
+        <div key={i}>
           <Grid
             className={styles.menuIcon}
             onMouseOver={() => handleHover(item.title)}
-            onMouseLeave={() => handleHover(null)}
+            onMouseLeave={() => handleHover("")}
             onClick={() => handleClick(item.title)}
           >
             <Grid>{item.icon}</Grid>
@@ -66,7 +38,7 @@ const SideBar = () => {
           ) : (
             ""
           )}
-        </>
+        </div>
       ))}
     </Box>
   );
