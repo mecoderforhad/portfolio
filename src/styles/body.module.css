@@ -1,5 +1,6 @@
 .body {
+  border: 2px solid red;
   background-color: #edf1fd;
   overflow: hidden;
-  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  font-family: Georgia, "Times New Roman", Times, serif !important;
 }

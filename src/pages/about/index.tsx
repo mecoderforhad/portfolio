@@ -6,11 +6,18 @@ const index = () => {
   return (
     <MainPageWrapper>
       <SubLayout>
-        <Typography
-          sx={{ fontFamily: "Gorgia", fontSize: "40px", fontWeight: "600" }}
-        >
-          About
-        </Typography>
+        <div style={{ border: "2px solid red" }}>
+          <Typography
+            sx={{
+              fontFamily: "Gorgia",
+              fontSize: "40px",
+              fontWeight: "600",
+              margin: "20px",
+            }}
+          >
+            About
+          </Typography>
+        </div>
       </SubLayout>
     </MainPageWrapper>
   );
