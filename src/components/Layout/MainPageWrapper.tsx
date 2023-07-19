@@ -5,7 +5,7 @@ import styles from "../../styles/body.module.css";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Item } from "../Layout/styles/config";
+import { Item, Wrapper } from "../Layout/styles/config";
 
 interface Props {
   children?: ReactNode;
